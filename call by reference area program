@@ -1,0 +1,17 @@
+#include <stdio.h>
+float area(float *);
+int main()
+{
+    float dia;
+    printf("Enter the diameter: ");
+    scanf("%f",&dia);
+    area(&dia);
+
+    return 0;
+}
+float area(float *x)
+{
+    float ar=(3.14*(*x)*(*x));
+    printf("Area of circle is %f",ar);
+    return 0;
+}
