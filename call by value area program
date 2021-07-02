@@ -1,0 +1,16 @@
+#include <stdio.h>
+float area(float ,float);
+int main()
+{
+    float l,b;
+    printf("Enter the length and breadth: ");
+    scanf("%f %f",&l,&b);
+    area(l,b);
+
+    return 0;
+}
+float area(float x,float y)
+{
+float ar=x*y;
+    printf("Area of rectangle %f",ar);
+}
