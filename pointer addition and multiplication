@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+    int a,b,sum,multi,*ptr1,*ptr2;
+    scanf("%d %d",&a,&b);
+    ptr1=&a;
+    ptr2=&b;
+    sum= *ptr1 + *ptr2;
+    multi= *ptr1 * *ptr2;
+    printf("sum %d \n",sum);
+    printf("multi is %d",multi);
+
+    return 0;
+}
