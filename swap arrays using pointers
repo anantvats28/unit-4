@@ -1,0 +1,55 @@
+//Write a C program to swap two arrays using pointers
+#include<stdio.h>
+int main()
+{
+    int n,*p1,*p2,no,temp[100];
+    printf("Enter the maximum limit 1st array: ");
+    scanf("%d",&n);
+    int a[n];
+    for(int i=0;i<n;++i)
+    {
+        printf("Enter the number for first array a[%d]: ",i);
+        scanf("%d",&a[i]);
+    }
+    p1=a;
+    printf("Enter the maximum limit 2nd array: ");
+    int b[n];
+    for(int i=0;i<n;++i)
+    {
+        printf("Enter the number for second array b[%d]: ",i);
+        scanf("%d",&b[i]);
+    }
+      p2=b; 
+      printf(" Before Swap arrays of a[]\n ");
+    for(int i=0;i<n;++i)
+    {
+        printf("%d\t",a[i]);
+    }
+    printf("\n");
+    printf(" Before swap arrays of b[]:\n ");
+    for(int i=0;i<n;++i)
+    {
+        printf("%d\t",b[i]);
+    }
+    printf("\n");
+    for(int i=0;i<n;++i)
+    {
+
+    temp[i]=*(p1+i);
+    *(p1+i)=*(p2+i);
+    *(p2+i)=temp[i];   
+    }
+    
+     printf(" After Swap arrays of a[]\n ");
+    for(int i=0;i<n;++i)
+    {
+        printf("%d\t",*(p1+i));
+    }
+    printf("\n");
+    printf(" After swap arrays of b[]:\n ");
+    for(int i=0;i<n;++i)
+    {
+        printf("%d\t",*(p2+i));
+    }
+    return 0;
+    }
