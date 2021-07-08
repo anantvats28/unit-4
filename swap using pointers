@@ -1,0 +1,15 @@
+//C program to swap two numbers 
+#include<stdio.h>
+int main()
+{
+    int a,b,c,*ptr1,*ptr2;
+    scanf("%d %d",&a,&b);
+    printf("Enter the first and second number : ");
+    ptr1=&a;
+    ptr2=&b;
+    c=*ptr1;
+    *ptr1=*ptr2;
+    *ptr2=c;
+    printf("Swap is of first %d and second number is %d  ",*ptr1,*ptr2);
+    return 0;
+}
