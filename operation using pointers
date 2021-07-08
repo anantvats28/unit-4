@@ -1,0 +1,22 @@
+//C program to add,substract,multiplication ,division two numbers using pointers
+#include <stdio.h>
+
+int main()
+{
+    int a,b,sum,multi,subs,div,*ptr1,*ptr2;
+    printf("Enter the two numbers : ");
+    scanf("%d %d",&a,&b);
+    ptr1=&a;
+    ptr2=&b;
+    sum= *ptr1 + *ptr2;
+    multi= *ptr1 * *ptr2;
+    subs= *ptr1 - *ptr2;
+    div= *ptr1 / *ptr2 ;
+    printf("sum  is %d \n",sum);
+    printf("substraction is  %d \n",subs);
+    printf("multiplication is  %d \n",multi);
+    printf("division is  %d \n",div);
+    
+
+    return 0;
+}
