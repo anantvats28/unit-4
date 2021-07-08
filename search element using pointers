@@ -1,0 +1,32 @@
+//C program to search element in array using pointers
+#include <stdio.h>
+
+int main()
+{
+    int n,*p,b,flag;
+    printf("Enter the maximum limit: ");
+    scanf("%d",&n);
+    int a[n];
+    for(int i=0;i<n;++i)
+    {
+        printf("Enter the number %d: ",i+1);
+        scanf("%d",&a[i]);
+    }
+    p=a;
+    printf("enter the element for searching: ");
+    scanf("%d",&b);
+    for(int j=0;j<n;++j)
+    {
+       if(b==*(p+j))
+       {
+        flag=1;
+       printf("element is found in array\n");
+       break;
+       }
+       
+    }
+    if(flag!=1)
+    printf("element is not found in array");
+
+    return 0;
+}
